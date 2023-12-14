@@ -7,6 +7,7 @@ This application integrates a PDF text extraction feature with OpenAI's ChatGPT 
 ## Features
 
 - PDF Text Extraction: Extract text from any given page of a PDF document.
+- Embedding Vector: Store the extracted text into embedding vector form in a vector datbase.
 - ChatGPT-Powered Responses: Generate answers to questions based on the content of a specified page in the PDF document.
 - Web-Based Interface: The application is accessible through a web interface, allowing for easy interaction and use.
 
@@ -14,13 +15,15 @@ This application integrates a PDF text extraction feature with OpenAI's ChatGPT 
 
 1. PDF Selection and Page Reference: Users can specify a page number from a pre-defined PDF document.
 2. Question Input: Users can input a question related to the content of the selected page.
-3. Answer Generation: The application processes the extracted text from the PDF page and the user's question, leveraging ChatGPT to generate a relevant answer.
-4. Response Display: The generated answer is displayed to the user, providing insights or information based on the PDF's content.
+3. Similarity Search: Answers which are similar to the asked questions is search from the vector database.
+4. Answer Generation: The application processes the extracted text from the PDF page and the user's question, leveraging ChatGPT to generate a relevant answer.
+5. Response Display: The generated answer is displayed to the user, providing insights or information based on the PDF's content.
 
 ## Technology
 
 - FastAPI: Powers the backend of the application, handling web requests and server-side logic.
 - PDFMiner: Used for extracting text from PDF documents.
+- FAISS: Vector database to store the embedding vectors and perform similarity search.
 - OpenAI's ChatGPT: Provides the AI model for generating answers to user queries.
 - Uvicorn: Serves as the ASGI server for hosting the application.
 
